@@ -1,20 +1,19 @@
 class ProfilesController < ApplicationController
-    
   def new
     # form where a user can fill out their own profile.
     @user = User.find( params[:user_id] )
     @profile = @user.build_profile
-    
-    # validates :first_name, presence: true
   end
   
   def create
     @user = User.find( params[:user_id] )
     @profile = @user.build_profile(profile_params)
+    
     if @profile.save
       flash[:success] = "Profile Updated!"
       redirect_to user_path( params[:user_id] ) 
     else
+        flash[:danger] = "Please fill out the complete form."
       render action: :new 
     end
   end
