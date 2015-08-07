@@ -36,7 +36,8 @@ gem 'devise', '3.4.1'
 gem 'stripe', '1.16.1'
 # Figaro to hide secret keys
 gem 'figaro', '1.0'
-
+# Paperclip gem for pictures
+gem 'paperclip', '4.2.1'
 
 
 
