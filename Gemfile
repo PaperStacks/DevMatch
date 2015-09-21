@@ -39,8 +39,6 @@ gem 'figaro', '1.0'
 # Paperclip gem for pictures
 gem 'paperclip', '4.2.1'
 
-
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '3.1.7'
 # Use unicorn as the app server
